@@ -1,0 +1,35 @@
+public static void main(String[] args
+
+) {
+       public class AmicableNumbers {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        int num1 = in.nextInt();
+        System.out.println("Enter the second number: ");
+        int num2 = in.nextInt();
+//to store the sum of the factors
+        int sum_num1 = 0, sum_num2 = 0;
+//Calculating factors of 1st number
+        for (int i = 1; i < num1; i++) {
+            if (num1 % i == 0) {
+                sum_num1 += i;
+            }
+        }
+//Calvulating factors of 2nd number
+        for (int i = 1; i < num2; i++) {
+            if (num2 % i == 0) {
+                sum_num2 += i;
+            }
+        }
+        if ((sum_num1 == num2) && (sum_num2 == num1)) {
+            System.out.println("These numbers are amicable");
+        } else {
+            System.out.println("These numbers are not amicable");
+        }
+    }
+}
